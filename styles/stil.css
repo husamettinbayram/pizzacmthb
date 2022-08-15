@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #e84242;
+    --dark-color: #121212;
+    --shadow1: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    --borders: solid 1px black;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+/* base html codes */
+html {
+    font-size: 62.5%;
+    /* normalde 1rem 16px, font-size:62.5%  yaparak font-size:10 o da eşittir 1 rem yapmış oluyoruz ki böylece okunaklılık kolaylaşıyor*/
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    background-color: var(--main-color);
+    /* height: 200vh; */
+}
+
+.title {
+    font-size: 2rem;
+}
+
+section {
+    padding: 3.5rem 7%;
+}
+
+section a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--dark-color);
+    /* cursor:crosshair; */
+    /* background-color: var(--main-color);
+
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    height: 10rem;
+    line-height: 9rem; */
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+    color: var(--dark-color);
+    font-size: 1.7rem;
+    /* font-weight:500 ; */
+}
+
+/* html::-webkit-scrollbar{
+    width:2rem;
+    background-color: white;
+} */
+
+html::-webkit-scrollbar {
+    width: 2rem;
+    background-color: var(--dark-color);
+}
+
+html::-webkit-scrollbar-track {
+    width: 2rem;
+    background-color: transparent;
+}
+
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 0.4rem;
+    background-color: var(--main-color);
+}
+
+
+
+/* header start */
+.Header .Logo img {
+    height: 10rem;
+}
+
+.Header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 5rem;
+    box-shadow: var(--shadow1);
+    position: sticky;
+    top: 0px;
+    /* top:0px verdim ama header 2rem margini olduğu için o geçerli */
+    z-index: 1000;
+    /* her zaman en üstte kalsın diye çok yüksek bir z index değeri verdik. */
+
+}
+
+.Header .navBar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    border-bottom: solid 0.1rem transparent;
+}
+
+.Header .navBar .active,
+.Header .navBar a:hover {
+    /* border-bottom: solid 0.1rem transparent; */
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.Header .buttons button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+    /* transition: 0s; */
+    /*
+    border-radius: 0.5rem;
+    padding:0.3rem; */
+}
+
+/* .Header .buttons button:hover{
+    background-color: var(--main-color);
+
+} */
+
+/* header end */
+.home {
+    /* min-height: calc(100vh - 14rem); */
+    /* 10rem header image'ın yüksekliği, 2+2rem header top bottom marginlerin toplamı */
+    /* min-height: 100vh; */
+    /* border: solid black 0.5rem; */
+    min-height: 100vh;
+    background-image: url("../images/home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.home .content {
+    max-width: 60rem;
+    /* display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    border: solid; */
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #fff;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ccc;
+
+}
+
+/* home start */
+
+/* menu start */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .box-container .box {
+    /* border:solid; */
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.menu .box-container .box .box-head .menu-category {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    text-transform: lowercase;
+}
+
+.menu .box-container .box .box-head h3 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    /* margin: 2rem 0; */
+    /* font-size:2rem; */
+}
+
+.price {
+    font-size: 2.2rem;
+}
+
+.price span {
+    text-decoration: line-through;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.heading {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: solid #fff 0.2rem;
+}
+
+.heading span {
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* menu end */
+
+/* products start */
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.products .box-container .box .box-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.products .box-container .box .box-head .title {
+    font-size: 1.4rem;
+}
+
+.products .box-container .box .box-head .name {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+
+.products .box-container .dark-bg .box-head .name,
+.products .box-container .dark-bg .box-head .title {
+    color: white;
+}
+
+.products .box-container .dark-bg .box-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.products .box-container .box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+
+}
+.products .box-container .dark-bg {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+
+
+.products .box-container .dark-bg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+    /* display: none; */
+}
+
+.products .box-container .box-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+}
+
+.products .box-container .box-bottom .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.products .box-container .box-bottom .info .price {
+    font-size: 3rem;
+}
+
+.products .box-container .box-bottom .info .amount {
+    font-size: 1.4rem;
+}
+
+.products .box-container .dark-bg .box-bottom .info .price,
+.products .box-container .dark-bg .box-bottom .info .amount {
+    color: #fff;
+}
+
+.products .box-container .dark-bg .box-head .title {
+    font-size: 1.4rem;
+}
+
+.products .box-container .dark-bg .box-head .name {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+.products .box-container .box-bottom .product-btn a {
+    display: inline-block;
+    /* align-items: center;
+    justify-content: center; */
+    line-height: 6.5rem;
+    text-align: center;
+    
+    width: 6.5rem;
+    height:6.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius:50%;
+}
+
+.products .box-container .box-bottom .product-btn a i{
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+
+
+/* products end */
+
+/* about start */
+.about .row .image {
+    display: flex;
+    flex:1 1 45rem;
+}
+
+.about .row .image img {
+width: 100%;
+}
+/* about end */
+
+abc {
+    box-sizing: border-box;
+}
